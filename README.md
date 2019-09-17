@@ -11,7 +11,7 @@ Il s'agit de créer une arène où deux héros pourront s'affronter.
 #### Organisation
 Gestion de projet via Github Tools (issues, projects) et utilisation de la méthode Kanban
 
-## Résultat attendu
+## Projet
 Le but de ce challenge est de tester ta capacité à monter une petite application dans le respect des bonnes pratiques.
 On te propose plusieurs étapes, avec des bonus facultatifs. Tu peux t'arrêter quand tu veux.
 Tiens-nous régulièrement informés de ta progression.
