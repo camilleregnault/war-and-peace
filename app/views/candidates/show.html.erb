@@ -1,0 +1,16 @@
+<h1>Candidates#show</h1>
+
+<h1><%= @candidate.name %></h1>
+  <%# cl_image_tag @candidate.photo, height: 300, width: 400, crop: :fill %>
+    <ul>
+      <li>
+      <%= @candidate.popularity_points%> %
+      </li>
+      <li>
+      <%= @candidate.attack_strength %>
+      </li>
+    </ul>
+  
+  <%= link_to 'Edit', edit_candidate_path(@candidate.id) %> |
+  <%= link_to '🗑️', @candidate, data: { confirm: 'Are you sure?' }, method: :delete %> |
+  <%= link_to "See all candidates", candidates_path %>

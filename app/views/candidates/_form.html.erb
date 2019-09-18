@@ -1,0 +1,24 @@
+<%= form_for @candidate do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :popularity_percentage %>
+    <%= f.number_field :popularity_points %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :attack_strength %>
+    <%= f.number_field :attack_strength %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :photo %>
+    <%= f.file_field :photo  %>
+  </div>
+
+  <%= f.submit class:'btn btn primary', data: { confirm: 'Create a contact' } %>
+
+<% end %>
