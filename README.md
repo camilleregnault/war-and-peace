@@ -39,7 +39,7 @@ Puis ouvrez **http://localhost:3000/** dans un navigateur pour utiliser l’appl
 
 ## Démo:
 Projet hébergé sur [Heroku](https://www.heroku.com):
-...
+https://war-and-peace-game.herokuapp.com/
 
 ## Test:
 ###### Lancement des tests :
