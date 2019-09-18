@@ -6,9 +6,9 @@
     <li class="list-group-item">
       <%# cl_image_tag candidate.photo, height: 300, width: 400, crop: :fill %>
       <%= link_to candidate.name, candidate_path(candidate.id) %> |
-      <%= link_to 'Edit', edit_candidate_path(candidate.id), data:{ confirm: " Edit #{candidate.name} ?"}%> |
-      <%= link_to '🗑️', candidate, method: :delete, data: { confirm: "Delete #{candidate.name} ?" }%> 
+      <%= link_to 'Edit', edit_candidate_path(candidate.id), class:"btn btn-warning", data:{ confirm: " Edit #{candidate.name} ?"}%> |
+      <%= link_to 'Delete 🗑️', candidate, method: :delete, class:"btn btn-danger", data: { confirm: "Delete #{candidate.name} ?" }%> 
     </li>
   <% end %>
 </ul>
-<%= link_to "Proposer un nouveau candidat", new_candidate_path, class: 'btn btn-primary' %>
+<%= link_to "Proposer un nouveau candidat", new_candidate_path, class: 'btn btn-info' %>
