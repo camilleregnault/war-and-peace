@@ -6,7 +6,7 @@
   <div class="list-group">
     <% @candidates.each do |candidate| %>
       <div class="card-list">
-        <div class="avatar-circle">
+        <div class="avatar-circle" >
           <%= cl_image_tag candidate.photo, crop: :scale, class:"card-avatar" %> 
         </div>
         <%= link_to candidate.name, candidate_path(candidate.id), class:"card-title" %>
@@ -22,5 +22,3 @@
   </div>
   <%= link_to "Proposer un nouveau candidat", new_candidate_path, class: 'btn btn-info' %>
 </div>
-
-<%# 🗑️✖️ 👁💫♻%>

@@ -19,13 +19,10 @@
   text-align: center;
 }
 
-.card-title {
-}
-
 .avatar-circle {
   background: transparent;
-  width: 150px;
-  height: 150px;
+  // width: 150px;
+  height: 140px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -34,29 +31,23 @@
 .card-avatar {
   // overflow: hidden;
   // width: 150px;
-  display: inline;
   height: 100%;
+}
+
+.card-title {
+  text-decoration: none;
+  color: white;
+  padding: 1.5em;
+  font-size: 18px;
+}
+.card-title:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.6;
 }
 
 .card-buttons {
   padding: 5px;
-  text-align: center;
-  border-radius: 50%;
-}
-
-.btn:hover {
-  opacity: 0.6;
-}
-.watch-btn {
-  background: #02BE9A;
-}
-
-.edit-btn {
-  background: #1A7689;
-}
-
-.delete-btn {
-  background: #312174;
 }
 
 // #02BE9A
