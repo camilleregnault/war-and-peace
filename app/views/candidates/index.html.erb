@@ -5,7 +5,7 @@
   <ul class="list-group">
     <% @candidates.each do |candidate| %>
       <li class="list-group-item">
-        <%= cl_image_tag candidate.photo, height: 300, width: 400, crop: :fill %> 
+        <%= cl_image_tag candidate.photo, width: 200, crop: :scale %> 
         <%= link_to candidate.name, candidate_path(candidate.id) %> |
         <%= link_to 'Edit', edit_candidate_path(candidate.id), class:"btn btn-warning", 
                     data:{ confirm: "Edit #{candidate.name} ?" }%> |
