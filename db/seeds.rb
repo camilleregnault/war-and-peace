@@ -9,17 +9,17 @@ puts "start"
 
 Candidate.destroy_all
 Candidate.create(name:'Kirby', popularity_points: 98, attack_strength: 180, 
-                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568903138/qbizwicefw8aagi4vh9y.png")
+                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568905770/king_kirby_zzhpgz.png")
 Candidate.create(name:'Doctor Zoidberg', popularity_points: 30, attack_strength: 70, 
-                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568903187/udjes1kecx8xxq7prs43.jpg")
+                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568905770/zoidberg_campaign_jet8pu.jpg")
 Candidate.create(name:'Chuck Norris', popularity_points: 99, attack_strength: 180, 
-                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568903904/koqcehgw7yufgrwsjjll.png")
+                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568905770/chuck_norris_PNG8_dvtq06.png")
 Candidate.create(name:'Lisa Simpson', popularity_points: 35, attack_strength: 160, 
-                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568904019/lhjescq6hflkjrajxl5g.png")
+                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568905770/Lisa-Simpson-icon_ptgeru.png")
 Candidate.create(name:'Arnold S.', popularity_points: 65, attack_strength: 170, 
-                    remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568904019/lhjescq6hflkjrajxl5g.png")
+                    remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568905770/schwarzy_head_fwmhog.png")
 Candidate.create(name:'Lulu', popularity_points: 70, attack_strength: 110, 
-                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568904132/u4yr3x8igxaggixk1vru.png")
+                  remote_photo_url: "https://res.cloudinary.com/dabuecrzn/image/upload/v1568905771/FFX_Lulu_Art_veoq8o.png")
 
 
 puts "end"
