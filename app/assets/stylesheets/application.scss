@@ -6,8 +6,13 @@
 /* @import "config/bootstrap_variables"; */
 
 // Your CSS partials
-@import "welcome.scss";
+@import "landing.scss";
+@import "config/card.scss";
 
-// body {
-//   margin-top: 20px;
-// }
+body {
+  display: flex;
+  height: 100vh;
+  // background: #30333b;
+  // color: white;
+  // text-align: center;
+}

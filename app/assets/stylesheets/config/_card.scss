@@ -1,0 +1,64 @@
+.header {
+  text-align: center;
+}
+.list-group {
+  // display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+}
+
+.card-list {
+  background: #30333b;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 15px;
+  display: grid;
+  text-align: center;
+}
+
+.card-title {
+}
+
+.avatar-circle {
+  background: transparent;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.card-avatar {
+  // overflow: hidden;
+  // width: 150px;
+  display: inline;
+  height: 100%;
+}
+
+.card-buttons {
+  padding: 5px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+.watch-btn {
+  background: #02BE9A;
+}
+
+.edit-btn {
+  background: #1A7689;
+}
+
+.delete-btn {
+  background: #312174;
+}
+
+// #02BE9A
+// #1A7689
+// #312174
