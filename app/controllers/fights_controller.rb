@@ -6,7 +6,8 @@ class FightsController < ApplicationController
   def show
     @fight_result = Fight.last
     @winner = Candidate.find(@fight_result[:winner_id])
-    @loser = Candidate.find(@fight_result[:looser_id])
+    @a_candidate = Candidate.find(@fight_result[:a_id])
+    @b_candidate = Candidate.find(@fight_result[:b_id])
   end
 
   def create
@@ -40,17 +41,17 @@ class FightsController < ApplicationController
     end
     if a.popularity_points > b.popularity_points
       fight['winner_id'] = a.id
-      fight['looser_id'] = b.id
     else
       fight['winner_id'] = b.id
-      fight['looser_id'] = a.id
     end
+    fight['a_id'] = a.id
+    fight['b_id'] = b.id
     fight['a_attack'] = a_attack
     fight['b_attack'] = b_attack
     fight
   end
 
   def fight_params
-    params.require(:fight).permit(:winner_id, :loser_id, :a_attack, :b_attack)
+    params.require(:fight).permit(:winner_id, :a_id, :b_id, :a_attack, :b_attack)
   end
 end
