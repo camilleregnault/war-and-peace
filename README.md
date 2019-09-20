@@ -25,8 +25,8 @@ Nous nous intéresserons tout particulièrement aux choix de conception que tu f
 - [Node 10.16 ou superieur](https://nodejs.org/en/download/package-manager/)
 ###### Cloner le repository:
 ```
-git clone https://github.com/camilleregnault/ruby-calculator.git
-cd ruby-calculator/
+git clone https://github.com/camilleregnault/war-and-peace.git
+cd war-and-peace/
 yarn install
 bundle install
 ```
