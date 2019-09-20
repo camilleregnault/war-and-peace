@@ -5,9 +5,9 @@
   <%= form_for :fight do |f| %>
     <div class="form-group">
       <%= f.select(:candidate_a, options_for_select(
-                    @candidates.collect{ |candidate| "#{candidate.name}:  
+                    @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
-                    💪#{candidate.attack_strength}"}), 
+                    💪#{candidate.attack_strength}", candidate.id]}), 
                     class: "form-control")%>
     </div>
     
@@ -15,14 +15,14 @@
 
     <div class="form-group">
       <%= f.select(:candidate_b, options_for_select(
-                    @candidates.collect{ |candidate| "#{candidate.name}:  
+                    @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
-                    💪#{candidate.attack_strength}"}), 
+                    💪#{candidate.attack_strength}", candidate.id]}), 
                     class: "form-control")%>
     </div>
 
 
-    <%= f.submit "S'affronter !", class:'btn btn primary', class: 'btn btn-warning'%>
+    <%= f.submit "S'affronter !", class: 'btn btn-warning'%>
 
   <% end %>
 

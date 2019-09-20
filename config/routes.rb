@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'fights/index'
-  get 'fights/show'
   get 'welcome/index'
   
   resources :candidates
-
+  resources :fights, only:[:index, :show, :new, :create]
   root 'welcome#index'
 end
