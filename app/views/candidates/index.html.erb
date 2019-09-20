@@ -12,9 +12,13 @@
         <%= link_to candidate.name, candidate_path(candidate.id), class:"card-title" %>
         <div class="card-buttons">
           <%= link_to "👁", candidate_path(candidate.id), class:"btn watch-btn", title:"Watch" %>
-          <%= link_to '💫',  edit_candidate_path(candidate.id), class:"btn edit-btn", 
+          <%= link_to "💫",  edit_candidate_path(candidate.id), class:"btn edit-btn", 
                       data:{ confirm: "Edit #{candidate.name} ?" },  title:"Edit"%>
-          <%= link_to '✖️', candidate, method: :delete, class:"btn delete-btn", 
+
+
+
+                      
+          <%= link_to "✖️", candidate, method: :delete, class:"btn delete-btn", 
                       data: { confirm: "Delete #{candidate.name} ?" }, title:"Delete"%> 
         </div>
       </div>
