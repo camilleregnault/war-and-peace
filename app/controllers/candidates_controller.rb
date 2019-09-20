@@ -1,16 +1,15 @@
 class CandidatesController < ApplicationController
-  before_action :set_candidate, only: [:show, :edit, :update, :destroy] 
+  before_action :set_candidate, only: %i[show edit update destroy]
   def index
     @candidates = Candidate.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @candidate = Candidate.new
   end
-  
+
   def create
     @candidate = Candidate.new(candidate_params)
     if @candidate.save
@@ -19,9 +18,8 @@ class CandidatesController < ApplicationController
       render :new
     end
   end
-  
-  def edit
-  end
+
+  def edit; end
 
   def update
     @candidate.update(candidate_params)

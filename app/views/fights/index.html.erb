@@ -7,7 +7,7 @@
       <%= f.select(:candidate_a, options_for_select(
                     @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
-                    💪#{candidate.attack_strength}", candidate.id]}), 
+                    ⚡#{candidate.attack_strength}", candidate.id]}), 
                     class: "form-control")%>
     </div>
     
@@ -17,7 +17,7 @@
       <%= f.select(:candidate_b, options_for_select(
                     @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
-                    💪#{candidate.attack_strength}", candidate.id]}), 
+                    ⚡#{candidate.attack_strength}", candidate.id]}), 
                     class: "form-control")%>
     </div>
 
@@ -30,4 +30,3 @@
   <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
 </div>
 
-<%# 💙💪 %>
