@@ -2,6 +2,8 @@
   <div class="header">
     <h1>Candidates#index</h1>
     <p>Display all candidates</p>
+    <%= link_to "Lancer une campagne",  fights_index_path , class:"btn btn-warning" %>
+
   </div>
   <div class="list-group">
     <% @candidates.each do |candidate| %>
@@ -11,13 +13,12 @@
         </div>
         <%= link_to candidate.name, candidate_path(candidate.id), class:"card-title" %>
         <div class="card-buttons">
+          
           <%= link_to "👁", candidate_path(candidate.id), class:"btn watch-btn", title:"Watch" %>
+          
           <%= link_to "💫",  edit_candidate_path(candidate.id), class:"btn edit-btn", 
-                      data:{ confirm: "Edit #{candidate.name} ?" },  title:"Edit"%>
-
-
-
-                      
+                      data:{ confirm: "Edit #{candidate.name} ?" },  title:"Edit"%>                      
+          
           <%= link_to "✖️", candidate, method: :delete, class:"btn delete-btn", 
                       data: { confirm: "Delete #{candidate.name} ?" }, title:"Delete"%> 
         </div>
