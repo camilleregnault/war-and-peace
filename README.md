@@ -54,37 +54,37 @@ Le but est donc de créer l'application et d'afficher une page dans un navigateu
 
 ##### Bonus :
 
-- Un petit texte d'introduction de ton cru. C'est plus fun.
-- Joli design (mais n'y perd pas trop de temps non plus)
+- [ ]  Un petit texte d'introduction de ton cru. C'est plus fun.
+- [ ]  Joli design (mais n'y perd pas trop de temps non plus)
 
 #### 2. Pouvoir créer un personnage
 ##### Données requises :
 
-- Nom
-- Points de vie
-- Points d'attaque
-- Assure-toi qu'il n'y ait pas de grand déséquilibre entre combattants.
+- [ ]  Nom
+- [ ]  Points de vie
+- [ ]  Points d'attaque
+- [ ]  Assure-toi qu'il n'y ait pas de grand déséquilibre entre combattants.
 
 ##### Bonus :
 
-- L'arène n'est pas vide au premier démarrage de l'appli.
-- Les persos ont une photo de profil (ou de face)
-- Crud complet des personnages
-- Ajouter d'autres caractéristiques aux personnages
+- [ ]  L'arène n'est pas vide au premier démarrage de l'appli.
+- [ ]  Les persos ont une photo de profil (ou de face)
+- [ ]  Crud complet des personnages
+- [ ]  Ajouter d'autres caractéristiques aux personnages
 
 #### 3. READY? FIGHT!
 Pouvoir choisir deux personnages et les faire combattre, puis afficher le gagnant avec un récapitulatif du combat.
 
 ##### Bonus :
 
-- Historique des combats qui ont eu lieu
-- Ajout de points d'expérience (mais pourquoi faire ?)
-- Statistiques des combats : taux de victoire par perso et tout ça
+- [ ]  Historique des combats qui ont eu lieu
+- [ ]  Ajout de points d'expérience (mais pourquoi faire ?)
+- [ ]  Statistiques des combats : taux de victoire par perso et tout ça
 
 #### 4. Des armes
 Pouvoir assigner une arme aux personnages avant le combat.
 
 ##### Bonus :
 
-- Il n'y a pas que les armes dans la vie, il y a des boucliers aussi
-- Pouvoir utiliser plusieurs équipements
+- [ ]  Il n'y a pas que les armes dans la vie, il y a des boucliers aussi
+- [ ]  Pouvoir utiliser plusieurs équipements
