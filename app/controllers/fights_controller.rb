@@ -7,7 +7,6 @@ class FightsController < ApplicationController
     @fight_result = Fight.last
     @winner = Candidate.find(@fight_result[:winner_id])
     @looser = Candidate.find(@fight_result[:looser_id])
-    @fight_details = fight_detail(@winner, @looser, @fight_result)
   end
 
   def create
@@ -15,38 +14,53 @@ class FightsController < ApplicationController
     redirect_to fight_path(@fight) if @fight.save
   end
 
+  def history
+    @fights = Fight.last(10)
+  end
+
   private
 
   def fight_result(candidates)
-    a = Candidate.find(candidates['candidate_a'])
-    b = Candidate.find(candidates['candidate_b'])
+    # To randomize the first player
+    if rand(1..2) == 1
+      a = Candidate.find(candidates['candidate_a'])
+      b = Candidate.find(candidates['candidate_b'])
+    else
+      b = Candidate.find(candidates['candidate_a'])
+      a = Candidate.find(candidates['candidate_b'])
+    end
 
     a_attack = 0
     b_attack = 0
     loop do
       b.popularity_points = b.popularity_points - a.attack_strength
       a_attack += 1
-      return set_result_fight(a.id, b.id, a_attack, b_attack) if b.popularity_points <= 0
+      return set_result_fight(a, b, a_attack, b_attack) if b.popularity_points <= 0
 
       a.popularity_points = a.popularity_points - b.attack_strength
       b_attack += 1
-      return set_result_fight(b.id, a.id, b_attack, a_attack) if b.popularity_points <= 0
+      return set_result_fight(b, a, b_attack, a_attack) if b.popularity_points <= 0
     end
   end
 
-  def set_result_fight(winner_id, looser_id, winner_nb_attack, looser_nb_attack)
+  def set_result_fight(winner, looser, winner_nb_attack, looser_nb_attack)
     fight = {}
-    fight['winner_id'] = winner_id
-    fight['looser_id'] = looser_id
+    fight['winner_id'] = winner.id
+    fight['winner_name'] = winner.name
+    fight['winner_photo'] = winner.photo
     fight['winner_nb_attack'] = winner_nb_attack
+    fight['looser_id'] = looser.id
+    fight['looser_name'] = looser.name
+    fight['looser_photo'] = looser.photo
     fight['looser_nb_attack'] = looser_nb_attack
+    fight['detail'] = fight_detail(winner, looser, fight)
     fight
   end
 
-  def fight_detail(winner, looser, fight_result)
+  def fight_detail(winner, looser, fight)
     detail = []
-    winner_attack = fight_result['winner_nb_attack']
-    looser_attack = fight_result['looser_nb_attack']
+    winner_attack = fight['winner_nb_attack']
+    looser_attack = fight['looser_nb_attack']
     loop do
       break unless winner_attack.positive?
 
@@ -68,9 +82,14 @@ class FightsController < ApplicationController
   def fight_params
     params.require(:fight).permit(
       :winner_id,
+      :winner_name,
+      :winner_photo,
+      :winner_nb_attack,
       :looser_id,
-      :winner_nb_attack_attack,
-      :looser_nb_attack
+      :looser_name,
+      :looser_photo,
+      :looser_nb_attack,
+      :detail
     )
   end
 end

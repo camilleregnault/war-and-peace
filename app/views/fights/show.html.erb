@@ -7,16 +7,17 @@
         <p><%= @winner.name %></p> 
         <p><%= @fight_result['winner_nb_attack'] %></p>
 
-      <h2>📃Historique </h2>
-      <% @fight_details.each do |detail| %>
-      <%= detail %>
-      <br/>
-      <% end %>
 
       <h2>❌ Perdant</h2>
         <%= cl_image_tag @looser.photo, width: 200, crop: :scale%>
         <p><%= @looser.name %></p>
         <p><%= @fight_result['looser_nb_attack'] %></p>
         
-
+      <h2>📃Historique </h2>
+        <% @fight_result['detail'].each do |line| %>
+          <%= line %>
+          <br/>
+        <% end %>
+      <br>
+  <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
 </div>
