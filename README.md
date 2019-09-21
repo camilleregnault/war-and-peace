@@ -8,6 +8,7 @@ Il s'agit de créer une arène où deux héros pourront s'affronter.
 - Bootstrap 4.2
 - Node 10.16.0
 - Git
+- Postgresql
 #### Organisation
 Gestion de projet via Github Tools (issues, projects) et utilisation de la méthode [Kanban](https://github.com/camilleregnault/war-and-peace/projects/1)
 
