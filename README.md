@@ -60,16 +60,16 @@ Le but est donc de créer l'application et d'afficher une page dans un navigateu
 #### 2. Pouvoir créer un personnage
 ##### Données requises :
 
-- [ ]  Nom
-- [ ]  Points de vie
-- [ ]  Points d'attaque
-- [ ]  Assure-toi qu'il n'y ait pas de grand déséquilibre entre combattants.
+- [x]  Nom
+- [x]  Points de vie
+- [x]  Points d'attaque
+- [x]  Assure-toi qu'il n'y ait pas de grand déséquilibre entre combattants.
 
 ##### Bonus :
 
-- [ ]  L'arène n'est pas vide au premier démarrage de l'appli.
-- [ ]  Les persos ont une photo de profil (ou de face)
-- [ ]  Crud complet des personnages
+- [x]  L'arène n'est pas vide au premier démarrage de l'appli.
+- [x]  Les persos ont une photo de profil (ou de face)
+- [x]  Crud complet des personnages
 - [ ]  Ajouter d'autres caractéristiques aux personnages
 
 #### 3. READY? FIGHT!
