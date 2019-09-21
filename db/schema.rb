@@ -10,28 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_20_213248) do
+ActiveRecord::Schema.define(version: 2019_09_21_105944) do
 
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "candidates", force: :cascade do |t|
-    t.string "name"
-    t.integer "popularity_points"
-    t.integer "attack_strength"
-    t.string "photo"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'candidates', force: :cascade do |t|
+    t.string 'name'
+    t.integer 'popularity_points'
+    t.integer 'attack_strength'
+    t.string 'photo'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "fights", force: :cascade do |t|
-    t.integer "winner_id"
-    t.integer "a_id"
-    t.integer "b_id"
-    t.integer "a_attack"
-    t.integer "b_attack"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'fights', force: :cascade do |t|
+    t.integer 'winner_id'
+    t.integer 'looser_id'
+    t.integer 'winner_nb_attack'
+    t.integer 'looser_nb_attack'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
 end

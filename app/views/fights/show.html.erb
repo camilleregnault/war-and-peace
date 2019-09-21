@@ -1,7 +1,22 @@
 <div class="container">
-  <h1>Fights#show</h1>
-  <p>Find me in app/views/fights/show.html.erb</p>
-  <%= @winner.name %>
-  <%= @a_candidate.name %>
-  <%= @b_candidate.name %>
+  <h1>Résultat du scrutin</h1>
+    <p>Find me in app/views/fights/show.html.erb</p>
+      
+      <h2> ✔️Gagnant 🍾</h2>
+        <%= cl_image_tag @winner.photo, width: 200, crop: :scale%>
+        <p><%= @winner.name %></p> 
+        <p><%= @fight_result['winner_nb_attack'] %></p>
+
+      <h2>📃Historique </h2>
+      <% @fight_details.each do |detail| %>
+      <%= detail %>
+      <br/>
+      <% end %>
+
+      <h2>❌ Perdant</h2>
+        <%= cl_image_tag @looser.photo, width: 200, crop: :scale%>
+        <p><%= @looser.name %></p>
+        <p><%= @fight_result['looser_nb_attack'] %></p>
+        
+
 </div>
