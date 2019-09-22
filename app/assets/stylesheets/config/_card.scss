@@ -1,6 +1,7 @@
 .header {
   text-align: center;
 }
+
 .list-group {
   // display: block;
   display: flex;
@@ -51,6 +52,18 @@
   padding: 5px;
 }
 
+.result-list {
+  display: flex;
+}
 // #02BE9A
 // #1A7689
 // #312174
+
+.winner-looser-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.history-list {
+  text-justify: auto;
+}
