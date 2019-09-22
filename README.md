@@ -32,11 +32,16 @@ yarn install
 bundle install
 ```
 ## Lancement:
-###### Setup de la base de données :
+###### Base de données :
 ```
 rails db:setup
 ```
-
+###### Cloudinary :
+```
+touch .env
+echo '.env*' >> .gitignore
+```
+Ajouter la clé Clouninary dans le fichier .env ( CLOUDINARY_URL=cloudinary://*********************** )
 ###### Lancement de l’application :
 ```
 rails s
@@ -50,7 +55,9 @@ https://war-and-peace-game.herokuapp.com/
 
 ## Test:
 ###### Lancement des tests :
-...
+```
+rails test
+```
 
 ## Étapes
 #### 1. Page d'accueil statique
