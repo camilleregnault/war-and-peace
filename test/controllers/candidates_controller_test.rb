@@ -1,39 +1,15 @@
 require 'test_helper'
 
 class CandidatesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get candidates_index_url
-    assert_response :success
+  test 'should save new candidate' do
+    candidate = Candidate.create(
+      name: 'bobby singer',
+      photo: 'http:://test_to_photo.com',
+      popularity_points: 90,
+      attack_strength: 20
+    )
+    assert_equal candidate['name'], 'bobby singer'
+    assert_equal candidate['popularity_points'], 90
+    assert_equal candidate['attack_strength'], 20
   end
-
-  test "should get show" do
-    get candidates_show_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get candidates_new_url
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get candidates_edit_url
-    assert_response :success
-  end
-
-  test "should get create" do
-    get candidates_create_url
-    assert_response :success
-  end
-
-  test "should get update" do
-    get candidates_update_url
-    assert_response :success
-  end
-
-  test "should get destroy" do
-    get candidates_destroy_url
-    assert_response :success
-  end
-
 end
