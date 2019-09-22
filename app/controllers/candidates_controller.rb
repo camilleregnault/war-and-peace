@@ -16,8 +16,10 @@ class CandidatesController < ApplicationController
   def create
     @candidate = Candidate.new(candidate_params)
     if @candidate.save
+      flash[:error] = nil
       redirect_to candidate_path(@candidate)
     else
+      flash[:error] = 'Mauvaises données'
       render :new
     end
   end
