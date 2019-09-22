@@ -55,8 +55,8 @@ Le but est donc de créer l'application et d'afficher une page dans un navigateu
 
 ##### Bonus :
 
-- [ ]  Un petit texte d'introduction de ton cru. C'est plus fun.
-- [ ]  Joli design (mais n'y perd pas trop de temps non plus)
+- [x]  Un petit texte d'introduction de ton cru. C'est plus fun.
+- [x]  Joli design (mais n'y perd pas trop de temps non plus)
 
 #### 2. Pouvoir créer un personnage
 ##### Données requises :
