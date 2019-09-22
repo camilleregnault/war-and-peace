@@ -78,7 +78,7 @@ Pouvoir choisir deux personnages et les faire combattre, puis afficher le gagnan
 
 ##### Bonus :
 
-- [ ]  Historique des combats qui ont eu lieu
+- [x]  Historique des combats qui ont eu lieu
 - [ ]  Ajout de points d'expérience (mais pourquoi faire ?)
 - [ ]  Statistiques des combats : taux de victoire par perso et tout ça
 
