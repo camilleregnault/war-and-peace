@@ -4,11 +4,22 @@
   align-items: center;
   padding-bottom: 1em;
 }
+
 form {
-  padding-bottom: 0.4em;
+  padding-bottom: 2.5em;
 }
+
 input {
   width: 30em;
   border-radius: 10px;
   text-align: center;
+}
+
+select {
+  width: 30em;
+  border-radius: 5px;
+  text-align: center;
+  background: white;
+  padding: 0.5em;
+  margin: 0.5em;
 }

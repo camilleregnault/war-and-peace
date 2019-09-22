@@ -9,9 +9,9 @@
                     @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
                     ⚡#{candidate.attack_strength}", candidate.id]}), 
-                    class: "form-control")%>
+                    class: "form-control b-form-select")%>
       <%= f.select(:weapon_a, options_for_select(
-                    @weapons.collect{ |weapon| ["#{weapon.name}:  
+        @weapons.collect{ |weapon| ["#{weapon.name}:  
                     🧡 #{weapon.defence}  -  
                     💪#{weapon.attack}", weapon.id]}), 
                     class: "form-control")%>
@@ -20,6 +20,7 @@
     <p>vs</p>
 
     <div class="form-group">
+    
       <%= f.select(:candidate_b, options_for_select(
                     @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
