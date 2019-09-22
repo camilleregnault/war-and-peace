@@ -2,19 +2,22 @@
   <div class="header">
     <h1>Candidates#show</h1>
   </div>
-  
-  <h1><%= @candidate.name %></h1>
-    <%= cl_image_tag @candidate.photo, width: 200, crop: :scale%>
-      <ul>
-        <li>
-        <%= @candidate.popularity_points%> %
-        </li>
-        <li>
-        <%= @candidate.attack_strength %>
-        </li>
-      </ul>
-    
-    <%= link_to 'Edit', edit_candidate_path(@candidate.id), class:"btn btn-warning" %> |
-    <%= button_to '🗑️', @candidate, data: { confirm: 'Are you sure?' }, method: :delete, class:"btn btn-danger" %> |
-    <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
-</div>    
+
+    <div class="card-list">
+        <h2><%= @candidate.name %></h2>
+        <br>
+        <div class="avatar-circle" >
+          <%= cl_image_tag @candidate.photo, crop: :scale, class:"card-avatar" %> 
+        </div>
+        <p><%= '💙 ' %><%= @candidate.popularity_points %><%= '% de popularité' %> 
+        <br>
+        <%= '⚡ ' %><%= @candidate.attack_strength %><%= ' points de force' %></p>
+        <br>
+        <div class="card-buttons">
+          <%= link_to '💫', edit_candidate_path(@candidate.id), class:"btn edit-btn", title:"Edit" %> 
+          <%= link_to '✖️', @candidate, data: { confirm: 'Are you sure?' }, method: :delete, class:"btn delete-btn", title:'Delete' %>
+        </div>
+    </div>
+          <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
+</div>  
+
