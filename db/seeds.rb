@@ -22,9 +22,9 @@ Candidate.create(name: 'Lulu', popularity_points: 70, attack_strength: 11,
                   remote_photo_url: 'https://res.cloudinary.com/dabuecrzn/image/upload/v1568905771/FFX_Lulu_Art_veoq8o.png')
 
 Weapon.destroy_all
-Weapon.create(name: 'conseillé en communication', attack: 10, defence: 0)
-Weapon.create(name: 'journal à scandale', attack: 5, defence: 5)
-Weapon.create(name: 'financement de campagne', attack: 0, defence: 20)
-Weapon.create(name: 'institut de sondage', attack: 1, defence: 15)
+Weapon.create(name: 'Conseillé en communication', attack: 10, defence: 0)
+Weapon.create(name: 'Journal à scandale', attack: 5, defence: 5)
+Weapon.create(name: 'Financement de campagne', attack: 0, defence: 20)
+Weapon.create(name: 'Institut de sondage', attack: 1, defence: 15)
 
 puts "end"

@@ -1,6 +1,7 @@
 class FightsController < ApplicationController
   def index
     @candidates = Candidate.all
+    @weapons = Weapon.all
   end
 
   def show
@@ -20,6 +21,15 @@ class FightsController < ApplicationController
 
   private
 
+  def add_weapon(a, b)
+    weapon_a = Weapon.find(params['fight']['weapon_a'])
+    weapon_b = Weapon.find(params['fight']['weapon_b'])
+    a.attack_strength += weapon_a.attack
+    a.popularity_points += weapon_a.defence
+    b.attack_strength += weapon_b.attack
+    b.popularity_points += weapon_b.defence
+  end
+
   def fight_result(candidates)
     # To randomize the first player
     if rand(1..2) == 1
@@ -33,13 +43,13 @@ class FightsController < ApplicationController
     a_attack = 0
     b_attack = 0
     loop do
-      b.popularity_points = b.popularity_points - a.attack_strength
+      b.popularity_points -= a.attack_strength
       a_attack += 1
       return set_result_fight(a, b, a_attack, b_attack) if b.popularity_points <= 0
 
-      a.popularity_points = a.popularity_points - b.attack_strength
+      a.popularity_points -= b.attack_strength
       b_attack += 1
-      return set_result_fight(b, a, b_attack, a_attack) if b.popularity_points <= 0
+      return set_result_fight(b, a, b_attack, a_attack) if a.popularity_points <= 0
     end
   end
 

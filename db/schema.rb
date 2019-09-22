@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_22_110717) do
+ActiveRecord::Schema.define(version: 2019_09_22_132239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2019_09_22_110717) do
     t.string "looser_name"
     t.string "looser_photo"
     t.text "detail", default: [], array: true
+    t.string "winner_weapon"
+    t.string "looser_weapon"
   end
 
   create_table "weapons", force: :cascade do |t|

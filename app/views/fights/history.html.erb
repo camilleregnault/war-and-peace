@@ -29,4 +29,5 @@
         <br/>
       </div>
     <% end %>
+    <%= link_to "Retour", request.referer.present? ? request.referer : default_path, class:"btn btn-info" %>
 </div>
