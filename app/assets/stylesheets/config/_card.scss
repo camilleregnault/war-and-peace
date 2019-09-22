@@ -1,6 +1,7 @@
 .header {
   text-align: center;
 }
+
 .list-group {
   // display: block;
   display: flex;
@@ -10,8 +11,8 @@
 }
 
 .card-list {
-  background: #30333b;
-  color: white;
+  background: white;
+  color: black;
   padding: 20px;
   border-radius: 20px;
   margin: 15px;
@@ -21,28 +22,45 @@
 
 .avatar-circle {
   background: transparent;
-  // width: 150px;
+  //width: 150px;
   height: 140px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  margin-bottom: 1.5em;
 }
 
 .card-avatar {
   // overflow: hidden;
-  // width: 150px;
-  height: 100%;
+  width: 140px;
+  height: auto;
+}
+
+.small-avatar-circle {
+  background: transparent;
+  //width: 150px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-bottom: 1.5em;
+}
+
+.small-card-avatar {
+  // overflow: hidden;
+  width: 100px;
+  height: auto;
 }
 
 .card-title {
   text-decoration: none;
-  color: white;
-  padding: 1.5em;
+  color: black;
+  padding-bottom: 1.5em;
   font-size: 18px;
 }
 .card-title:hover {
   text-decoration: none;
-  color: white;
+  color: black;
   opacity: 0.6;
 }
 
@@ -50,6 +68,26 @@
   padding: 5px;
 }
 
+.result-list {
+  display: flex;
+}
 // #02BE9A
 // #1A7689
 // #312174
+
+.winner-looser-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.history-list {
+  text-justify: auto;
+}
+
+.character {
+  margin: 10px 10px 0 10px;
+}
+
+.character-details {
+  margin: 10px 10px 0 10px;
+}

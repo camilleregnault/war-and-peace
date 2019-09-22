@@ -1,24 +1,28 @@
+<% if flash[:error] -%>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+<% end -%>
+
 <%= form_for @candidate do |f| %>
   <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :name, 'Nom' %>
+    <%= f.text_field :name, required: true %>
   </div>
 
   <div class="form-group">
-    <%= f.label :popularity_percentage %>
+    <%= f.label :popularity_points, 'Popularité (entre 30 - 100):'  %>
     <%= f.number_field :popularity_points %>
   </div>
 
   <div class="form-group">
-    <%= f.label :attack_strength %>
+    <%= f.label :attack_strength, 'Force (Entre 10 - 25):' %>
     <%= f.number_field :attack_strength %>
   </div>
 
   <div class="form-group">
     <%= f.label :photo %>
-    <%= f.file_field :photo  %>
+    <%= f.file_field :photo, required: true  %>
   </div>
 
-  <%= f.submit class:'btn btn primary', data: { confirm: 'Create a contact' }, class: 'btn btn-warning'%>
+  <%= f.submit class:'btn btn primary', class: 'btn btn-warning'%>
 
 <% end %>

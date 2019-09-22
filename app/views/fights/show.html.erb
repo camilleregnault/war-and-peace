@@ -1,23 +1,37 @@
 <div class="container">
-  <h1>Résultat du scrutin</h1>
-    <p>Find me in app/views/fights/show.html.erb</p>
-      
-      <h2> ✔️Gagnant 🍾</h2>
-        <%= cl_image_tag @winner.photo, width: 200, crop: :scale%>
-        <p><%= @winner.name %></p> 
-        <p><%= @fight_result['winner_nb_attack'] %></p>
+  <div class="header">
+    <h1>Résultat du scrutin</h1>
+  </div>
 
+  <div class="card-list winner-looser-list">
+    <div>
+      <h2> ✔️Gagnant.e 🍾</h2>
+      <div class="avatar-circle" >
+        <%= cl_image_tag @winner.photo, width: 200, crop: :scale, class:"card-avatar"%>
+      </div>  
+      <h3><%= @winner.name %></h3> 
+      <p><%= @fight_result['winner_nb_attack'] %> attaque.s</p>
+    </div>
+    <div>
+      <h2>❌ Perdant.e</h2>
+      <div class="avatar-circle" >
+        <%= cl_image_tag @looser.photo, width: 200, crop: :scale, class:"card-avatar"%>
+      </div>
+      <h3><%= @looser.name %></h3>
+      <p><%= @fight_result['looser_nb_attack'] %> attaque.s</p>
+    </div>
+  </div>
 
-      <h2>❌ Perdant</h2>
-        <%= cl_image_tag @looser.photo, width: 200, crop: :scale%>
-        <p><%= @looser.name %></p>
-        <p><%= @fight_result['looser_nb_attack'] %></p>
-        
+  <div class="card-list history-list">
+    <div class="container">
       <h2>📃Détail de la campagne </h2>
         <% @fight_result['detail'].each do |line| %>
           <%= line %>
           <br/>
         <% end %>
-      <br>
+        <br>
+    </div>
+  </div>
+ 
   <%= link_to "Retour", request.referer.present? ? request.referer : default_path, class:"btn btn-info" %>
 </div>

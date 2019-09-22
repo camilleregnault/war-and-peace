@@ -19,7 +19,7 @@ class FightsController < ApplicationController
   end
 
   def history
-    fights = Fight.last(10)
+    fights = Fight.last(10).reverse
     @fight_summaries = []
     fights.each do |fight|
       summary = {}

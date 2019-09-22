@@ -1,16 +1,23 @@
 <div class="container">
-  <h1>Fights#index</h1>
-  <p>Choisis les candidats</p>
-
+  <div class="header">
+    <h1>Lancer une campagne</h1>
+    <h3>Choisis les candidats</h3>
+    <br/>
+    <p>
+      Qui soutenez-vous aux éléctions ?
+    <br/>
+      Qui sera son adversaire ?
+    </p>
+  </div>
   <%= form_for :fight do |f| %>
     <div class="form-group">
       <%= f.select(:candidate_a, options_for_select(
                     @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
                     ⚡#{candidate.attack_strength}", candidate.id]}), 
-                    class: "form-control")%>
+                    class: "form-control b-form-select")%>
       <%= f.select(:weapon_a, options_for_select(
-                    @weapons.collect{ |weapon| ["#{weapon.name}:  
+        @weapons.collect{ |weapon| ["#{weapon.name}:  
                     🧡 #{weapon.defence}  -  
                     💪#{weapon.attack}", weapon.id]}), 
                     class: "form-control")%>
@@ -19,6 +26,7 @@
     <p>vs</p>
 
     <div class="form-group">
+    
       <%= f.select(:candidate_b, options_for_select(
                     @candidates.collect{ |candidate| ["#{candidate.name}:  
                     💙 #{candidate.popularity_points}  -  
@@ -38,6 +46,6 @@
 
 
   <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
-  <%= link_to "Historique", fights_history_path, class:"btn btn-primary" %>
+  <%= link_to "Historique", fights_history_path, class:"btn btn-info" %>
 </div>
 
