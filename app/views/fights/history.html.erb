@@ -1,5 +1,7 @@
 <div class="container">
-  <h1>Historique</h1>
+  <div class="header">
+    <h1>Historique</h1>
+  </div>
     <% @fight_summaries.each do |fight| %>
       <div class="history-card">
         <%= 'Gagnant: ' %><%= fight['winner'].name %>

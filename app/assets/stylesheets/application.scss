@@ -10,11 +10,16 @@
 @import "landing.scss";
 @import "config/card.scss";
 @import "config/button.scss";
+@import "config/form";
 
 body {
   display: flex;
   height: 100vh;
-  // background: #30333b;
-  // color: white;
-  // text-align: center;
+  background: #05668d;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  padding: 2em 0 2em 0;
 }

@@ -1,0 +1,14 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+}
+form {
+  padding-bottom: 0.4em;
+}
+input {
+  width: 30em;
+  border-radius: 10px;
+  text-align: center;
+}

@@ -3,7 +3,8 @@
     <h1>Candidates#index</h1>
     <p>Display all candidates</p>
     <%= link_to "Lancer une campagne",  fights_path , class:"btn btn-warning" %>
-
+    <%= link_to "Nouveau candidat", new_candidate_path, class: 'btn btn-info' %>
+    <%= link_to "Historique", fights_history_path, class:"btn btn-info" %>
   </div>
   <div class="list-group">
     <% @candidates.each do |candidate| %>
@@ -16,8 +17,7 @@
           
           <%= link_to "👁", candidate_path(candidate.id), class:"btn watch-btn", title:"Watch" %>
           
-          <%= link_to "💫",  edit_candidate_path(candidate.id), class:"btn edit-btn", 
-                      data:{ confirm: "Edit #{candidate.name} ?" },  title:"Edit"%>                      
+          <%= link_to "💫",  edit_candidate_path(candidate.id), class:"btn edit-btn", title:"Edit"%>                      
           
           <%= link_to "✖️", candidate, method: :delete, class:"btn delete-btn", 
                       data: { confirm: "Delete #{candidate.name} ?" }, title:"Delete"%> 
@@ -25,6 +25,4 @@
       </div>
     <% end %>
   </div>
-  <%= link_to "Proposer un nouveau candidat", new_candidate_path, class: 'btn btn-info' %>
-  <%= link_to "Historique", fights_history_path, class:"btn btn-primary" %>
 </div>

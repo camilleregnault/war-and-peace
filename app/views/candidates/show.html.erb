@@ -1,6 +1,8 @@
-<div class="container">
-  <h1>Candidates#show</h1>
-
+<div class="container"> 
+  <div class="header">
+    <h1>Candidates#show</h1>
+  </div>
+  
   <h1><%= @candidate.name %></h1>
     <%= cl_image_tag @candidate.photo, width: 200, crop: :scale%>
       <ul>

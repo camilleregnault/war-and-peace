@@ -1,7 +1,8 @@
 <div class="container">
-  <h1>Fights#index</h1>
-  <p>Choisis les candidats</p>
-
+  <div class="header">
+    <h1>Fights#index</h1>
+    <p>Choisis les candidats</p>
+  </div>
   <%= form_for :fight do |f| %>
     <div class="form-group">
       <%= f.select(:candidate_a, options_for_select(
@@ -38,6 +39,6 @@
 
 
   <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
-  <%= link_to "Historique", fights_history_path, class:"btn btn-primary" %>
+  <%= link_to "Historique", fights_history_path, class:"btn btn-info" %>
 </div>
 
