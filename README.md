@@ -32,6 +32,11 @@ yarn install
 bundle install
 ```
 ## Lancement:
+###### Setu:
+```
+rails db:setup
+```
+
 ###### Lancement de l’application
 ```
 rails s
