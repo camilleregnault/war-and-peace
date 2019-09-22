@@ -4,7 +4,6 @@ class Weapons < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :attack
       t.integer :defence
-
       t.timestamps
     end
   end

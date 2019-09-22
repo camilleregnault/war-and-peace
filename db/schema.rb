@@ -26,18 +26,14 @@ ActiveRecord::Schema.define(version: 2019_09_22_132239) do
 
   create_table "fights", force: :cascade do |t|
     t.integer "winner_id"
+    t.integer "winner_weapon_id"
+    t.integer "winner_nb_attack"
+    t.integer "looser_id"
+    t.integer "looser_weapon_id"
+    t.integer "looser_nb_attack"
+    t.text "detail", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "looser_id"
-    t.integer "winner_nb_attack"
-    t.integer "looser_nb_attack"
-    t.string "winner_name"
-    t.string "winner_photo"
-    t.string "looser_name"
-    t.string "looser_photo"
-    t.text "detail", default: [], array: true
-    t.string "winner_weapon"
-    t.string "looser_weapon"
   end
 
   create_table "weapons", force: :cascade do |t|
