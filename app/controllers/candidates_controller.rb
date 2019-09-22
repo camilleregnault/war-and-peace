@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Candidates controller
 class CandidatesController < ApplicationController
   before_action :set_candidate, only: %i[show edit update destroy]
   def index
@@ -34,7 +37,12 @@ class CandidatesController < ApplicationController
   private
 
   def candidate_params
-    params.require(:candidate).permit(:name, :photo, :popularity_points, :attack_strength)
+    params.require(:candidate).permit(
+      :name,
+      :photo,
+      :popularity_points,
+      :attack_strength
+    )
   end
 
   def set_candidate
