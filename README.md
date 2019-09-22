@@ -32,12 +32,12 @@ yarn install
 bundle install
 ```
 ## Lancement:
-###### Setup de la base de données:
+###### Setup de la base de données :
 ```
 rails db:setup
 ```
 
-###### Lancement de l’application
+###### Lancement de l’application :
 ```
 rails s
 ```
