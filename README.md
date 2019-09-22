@@ -51,7 +51,7 @@ https://war-and-peace-game.herokuapp.com/
 #### 1. Page d'accueil statique
 
 C'est l'accueil de l'arène, d'où nous pourrons lancer les combats.
-Le but est donc de créer l'application et d'afficher une page dans un navigateur.
+Le but est donc de créer l'application et d'afficher une page dans un navigateur. ✔️
 
 ##### Bonus :
 
@@ -74,7 +74,7 @@ Le but est donc de créer l'application et d'afficher une page dans un navigateu
 - [ ]  Ajouter d'autres caractéristiques aux personnages
 
 #### 3. READY? FIGHT!
-Pouvoir choisir deux personnages et les faire combattre, puis afficher le gagnant avec un récapitulatif du combat.
+Pouvoir choisir deux personnages et les faire combattre, puis afficher le gagnant avec un récapitulatif du combat. ✔️
 
 ##### Bonus :
 
@@ -83,7 +83,7 @@ Pouvoir choisir deux personnages et les faire combattre, puis afficher le gagnan
 - [ ]  Statistiques des combats : taux de victoire par perso et tout ça
 
 #### 4. Des armes
-Pouvoir assigner une arme aux personnages avant le combat.
+Pouvoir assigner une arme aux personnages avant le combat.✔️
 
 ##### Bonus :
 
