@@ -82,20 +82,20 @@ class FightsController < ApplicationController
 
       if winner_attack.positive?
         detail.push("#{winner['fighter'].name} attaque #{looser['fighter'].name}
-          avec #{winner['weapon'].name}.
+          avec un #{winner['weapon'].name}.
           #{looser['fighter'].name} perd #{winner['fighter'].attack_strength}
-          points de vie.")
+          points de popularité.")
         winner_attack -= 1
       end
 
       if looser_attack.positive?
         detail.push("#{looser['fighter'].name} attaque #{winner['fighter'].name}
-          avec #{looser['weapon'].name}.
+          avec un #{looser['weapon'].name}.
           #{winner['fighter'].name} perd #{looser['fighter'].attack_strength}
-          point de vie.")
+          point de popularité.")
         looser_attack -= 1
       else
-        detail.push("#{looser['fighter'].name} est mort.")
+        detail.push("#{looser['fighter'].name} a perdu.")
       end
     end
     detail

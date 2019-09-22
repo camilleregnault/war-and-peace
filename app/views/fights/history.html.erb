@@ -2,25 +2,28 @@
   <h1>Historique</h1>
     <% @fight_summaries.each do |fight| %>
       <div class="history-card">
-        <%= 'Gagnant: ' %>
+        <%= 'Gagnant: ' %><%= fight['winner'].name %>
+        <%= cl_image_tag fight['winner'].photo, width: 100, crop: :scale%>
         <br/>
-        <%= fight['winner'] %>
+        <%= 'A utilisé un ' %><%= fight['winner_weapon'].name %>
         <br/>
-        <%= fight['winner_weapon'] %>
+        <%= 'A attaqué ' %><%= fight['winner_nb_attack'] %><%= ' fois.' %>
         <br/>
-        <%= fight['winner_nb_attack'] %>
+
+        <%= 'Perdant: ' %><%= fight['looser'].name %>
+        <%= cl_image_tag fight['looser'].photo, width: 100, crop: :scale%>
         <br/>
-        <%= 'Perdant: ' %>
+        <%= 'A utilisé un ' %><%= fight['looser_weapon'].name %>
         <br/>
-        <%= fight['looser'] %>
-        <br/>
-        <%= fight['looser_weapon'] %>
-        <br/>
-        <%= fight['looser_nb_attack'] %>
+        <%= 'A attaqué ' %><%= fight['looser_nb_attack'] %><%= ' fois.' %>
         <br/>
         
         <%= 'Détails: ' %>
-        <%= fight['detail'] %>
+        <br/>
+        <% fight['detail'].each do |line|%>
+          <%= line %>
+          <br/>
+        <% end %>
 
         <br/>
         <br/>
