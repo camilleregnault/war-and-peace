@@ -4,33 +4,49 @@
   </div>
     <% @fight_summaries.each do |fight| %>
       <div class="history-card">
-        <%= 'Gagnant: ' %><%= fight['winner'].name %>
-        <%= cl_image_tag fight['winner'].photo, width: 100, crop: :scale%>
-        <br/>
-        <%= 'A utilisé un ' %><%= fight['winner_weapon'].name %>
-        <br/>
-        <%= 'A attaqué ' %><%= fight['winner_nb_attack'] %><%= ' fois.' %>
-        <br/>
-
-        <%= 'Perdant: ' %><%= fight['looser'].name %>
-        <%= cl_image_tag fight['looser'].photo, width: 100, crop: :scale%>
-        <br/>
-        <%= 'A utilisé un ' %><%= fight['looser_weapon'].name %>
-        <br/>
-        <%= 'A attaqué ' %><%= fight['looser_nb_attack'] %><%= ' fois.' %>
-        <br/>
+        <div class="card-list winner-looser-list">
+          <div class="character">
+            <%= 'Gagnant: ' %><%= fight['winner'].name %>
+            <div class="small-avatar-circle" >
+              <%= cl_image_tag fight['winner'].photo, crop: :scale, class:"small-card-avatar"%>
+            </div>
+          </div>
+          <div class="character-details">
+            <%= 'A utilisé un ' %>
+            <br/>
+            <%= fight['winner_weapon'].name %>
+            <br/>
+            <br/>
+            <%= 'A attaqué ' %><%= fight['winner_nb_attack'] %><%= ' fois.' %>
+          </div>
+          
+          <div class="character">
+            <%= 'Perdant: ' %><%= fight['looser'].name %>
+            <div class="small-avatar-circle" >
+              <%= cl_image_tag fight['looser'].photo, crop: :scale, class:"small-card-avatar"%>
+            </div>
+          </div>
+          <div class="character-details">
+            <%= 'A utilisé un ' %>
+            <br/>
+            <%= fight['looser_weapon'].name %>
+            <br/>
+            <br/>
+            <%= 'A attaqué ' %><%= fight['looser_nb_attack'] %><%= ' fois.' %>
+          </div>
+        </div> 
         
-        <%= 'Détails: ' %>
-        <br/>
-        <% fight['detail'].each do |line|%>
-          <%= line %>
+        <div class="card-list history-list">
+          
+          <%= 'Détails: ' %>
           <br/>
-        <% end %>
-
-        <br/>
-        <br/>
-        <br/>
+          <% fight['detail'].each do |line|%>
+            <%= line %>
+            <br/>
+          <% end %>
+        </>
       </div>
+          <br/>
     <% end %>
     <%= link_to "Retour", request.referer.present? ? request.referer : default_path, class:"btn btn-info" %>
 </div>

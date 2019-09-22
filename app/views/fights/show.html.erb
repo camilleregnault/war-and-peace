@@ -4,24 +4,24 @@
       <p>Find me in app/views/fights/show.html.erb</p>
   </div>
 
-    <div class="card-list winner-looser-list">
-        <div>
-          <h2> ✔️Gagnant 🍾</h2>
-            <div class="avatar-circle" >
-              <%= cl_image_tag @winner.photo, width: 200, crop: :scale, class:"card-avatar"%>
-            </div>  
-            <h3><%= @winner.name %></h3> 
-            <p><%= @fight_result['winner_nb_attack'] %> attaques</p>
-        </div>
-        <div>
-          <h2>❌ Perdant</h2>
-            <div class="avatar-circle" >
-              <%= cl_image_tag @looser.photo, width: 200, crop: :scale, card:"avatar"%>
-            </div>
-            <h3><%= @looser.name %></h3>
-            <p><%= @fight_result['looser_nb_attack'] %> attaques</p>
-        </div>
+  <div class="card-list winner-looser-list">
+    <div>
+      <h2> ✔️Gagnant 🍾</h2>
+      <div class="avatar-circle" >
+        <%= cl_image_tag @winner.photo, width: 200, crop: :scale, class:"card-avatar"%>
+      </div>  
+      <h3><%= @winner.name %></h3> 
+      <p><%= @fight_result['winner_nb_attack'] %> attaques</p>
     </div>
+    <div>
+      <h2>❌ Perdant</h2>
+      <div class="avatar-circle" >
+        <%= cl_image_tag @looser.photo, width: 200, crop: :scale, class:"card-avatar"%>
+      </div>
+      <h3><%= @looser.name %></h3>
+      <p><%= @fight_result['looser_nb_attack'] %> attaques</p>
+    </div>
+  </div>
 
   <div class="card-list history-list">
     <div class="container">
