@@ -83,7 +83,7 @@ Pouvoir choisir deux personnages et les faire combattre, puis afficher le gagnan
 - [ ]  Statistiques des combats : taux de victoire par perso et tout ça
 
 #### 4. Des armes
-Pouvoir assigner une arme aux personnages avant le combat.✔️
+Pouvoir assigner une arme aux personnages avant le combat. ✔️
 
 ##### Bonus :
 
