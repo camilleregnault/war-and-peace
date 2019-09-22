@@ -13,11 +13,11 @@
         <p><%= @looser.name %></p>
         <p><%= @fight_result['looser_nb_attack'] %></p>
         
-      <h2>📃Historique </h2>
+      <h2>📃Détail de la campagne </h2>
         <% @fight_result['detail'].each do |line| %>
           <%= line %>
           <br/>
         <% end %>
       <br>
-  <%= link_to "Liste des candidats", candidates_path, class:"btn btn-info" %>
+  <%= link_to "Retour", request.referer.present? ? request.referer : default_path, class:"btn btn-info" %>
 </div>
