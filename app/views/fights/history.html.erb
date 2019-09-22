@@ -1,0 +1,32 @@
+<div class="container">
+  <h1>Historique</h1>
+    <% @fights.each do |fight| %>
+      <div class="history-card">
+        <%= 'Gagnant: ' %>
+        <br/>
+        <%= fight['winner_photo'] %>
+        <br/>
+        <%= fight['winner_name'] %>
+        <br/>
+        <%= fight['winner_nb_attack'] %>
+        <br/>
+        <%= 'Perdant: ' %>
+        <br/>
+        <%= fight['looser_photo'] %>
+        <br/>
+        <%= fight['looser_name'] %>
+        <br/>
+        <%= fight['looser_nb_attack'] %>
+        <br/>
+        
+        <%= 'Detail: ' %>
+        <% fight['detail'].each do |line| %>
+          <%= line %>
+          <br/>
+        <% end %>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+    <% end %>
+</div>
