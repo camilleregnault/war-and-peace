@@ -8,7 +8,7 @@ Il s'agit de créer une arène où deux héros pourront s'affronter.
 - Bootstrap 4.2
 - Node 10.16.0
 - Git
-- Postgresql
+- Postgresql 11.5 
 #### Organisation
 Gestion de projet via Github Tools (issues, projects) et utilisation de la méthode [Kanban](https://github.com/camilleregnault/war-and-peace/projects/1)
 
@@ -24,6 +24,7 @@ Nous nous intéresserons tout particulièrement aux choix de conception que tu f
 - [Rails 6.0 ou supérieur](https://guides.rubyonrails.org/v5.0/getting_started.html)
 - [Rbenv](https://github.com/rbenv/rbenv) (Si plusieurs versions de Ruby sur le même environnement)
 - [Node 10.16 ou superieur](https://nodejs.org/en/download/package-manager/)
+- [Postgesql](https://www.postgresql.org/)
 ###### Cloner le repository:
 ```
 git clone https://github.com/camilleregnault/war-and-peace.git
@@ -32,11 +33,16 @@ yarn install
 bundle install
 ```
 ## Lancement:
-###### Setup de la base de données :
+###### Base de données :
 ```
 rails db:setup
 ```
-
+###### Cloudinary :
+```
+touch .env
+echo '.env*' >> .gitignore
+```
+Ajouter la clé Clouninary dans le fichier .env ( CLOUDINARY_URL=cloudinary://*********************** )
 ###### Lancement de l’application :
 ```
 rails s
@@ -50,7 +56,9 @@ https://war-and-peace-game.herokuapp.com/
 
 ## Test:
 ###### Lancement des tests :
-...
+```
+rails test
+```
 
 ## Étapes
 #### 1. Page d'accueil statique
