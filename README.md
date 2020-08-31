@@ -102,3 +102,6 @@ Pouvoir assigner une arme aux personnages avant le combat. ✔️
 
 - [x]  Il n'y a pas que les armes dans la vie, il y a des boucliers aussi
 - [ ]  Pouvoir utiliser plusieurs équipements
+
+#### Informations complémentaires
+Oui, j'ai lu Guerre et Paix
