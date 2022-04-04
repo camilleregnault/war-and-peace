@@ -20,11 +20,14 @@ Candidate.create(name: 'Arnold S.', popularity_points: 65, attack_strength: 17,
                     remote_photo_url: 'https://res.cloudinary.com/dabuecrzn/image/upload/v1568905770/schwarzy_head_fwmhog.png')
 Candidate.create(name: 'Lulu', popularity_points: 70, attack_strength: 11, 
                   remote_photo_url: 'https://res.cloudinary.com/dabuecrzn/image/upload/v1568905771/FFX_Lulu_Art_veoq8o.png')
+Candidate.create(name: 'Les Super Nanas', popularity_points: 80, attack_strength: 18,
+                  remote_photo_url: 'https://res.cloudinary.com/dabuecrzn/image/upload/v1649107288/00-mdg-supernanas_vk54sz.png')
 
 Weapon.destroy_all
 Weapon.create(name: 'Conseillé en communication', attack: 10, defence: 0)
 Weapon.create(name: 'Journal à scandale', attack: 5, defence: 5)
 Weapon.create(name: 'Financement de campagne', attack: 0, defence: 20)
 Weapon.create(name: 'Institut de sondage', attack: 1, defence: 15)
+Weapon.create(name: 'Mignonerie', attack: 2, defence: 10)
 
 puts "end"
