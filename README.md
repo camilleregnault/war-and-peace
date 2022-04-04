@@ -105,3 +105,9 @@ Pouvoir assigner une arme aux personnages avant le combat. ✔️
 
 #### Informations complémentaires
 Oui, j'ai lu Guerre et Paix
+
+#### TODOS
+- [ ] Cacher destroy et update sur les personnages
+- [ ] Upgrade l'UI (les boutons, armes, ... ne sont pas clairs)
+- [ ] Ajouter un form "Proposer un candidats"
+- [ ] Seeds Fight
